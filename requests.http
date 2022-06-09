@@ -1,0 +1,18 @@
+# SERVICES DIRECTLY
+
+GET http://localhost:8100/currency-conversion-feign/from/USD/to/INR/quantity/10
+Accept: application/json
+###
+GET http://localhost:8000/currency-exchange/from/USD/to/INR
+Accept: application/json
+###
+
+# API GATEWAY
+
+GET http://localhost:8765/currency-exchange/from/USD/to/INR
+###
+GET http://localhost:8765/currency-conversion/from/USD/to/INR/quantity/10
+###
+GET http://localhost:8765/currency-conversion-feign/from/USD/to/INR/quantity/10
+###
+GET http://localhost:8765/currency-conversion-new/from/USD/to/INR/quantity/10
